@@ -1,1 +1,46 @@
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication55;
+
+/**
+ *
+ * @author STUDENT
+ */
+import java.util.Scanner;
+public class JavaApplication55 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int[] sales=new int [7];
+        int total=0;
+        int count=0;
+        
+        
+        
+        System.out.print("enter sales of 7 days");
+        
+        
+        for (int i=0; i<7; i++){
+            sales[i]=input.nextInt ();
+            total+=sales[i];
+            
+            
+            if(sales[i]>20){
+                count++;
+            }
+        }
+        long average=Math.round(total/7.0);
+        System.out.println("Total"+total);
+        System.out.println("days greater than 20"+count);
+        System.out.println("Average"+average);
+    }
+    
+}
